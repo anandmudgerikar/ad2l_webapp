@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-image: url('./data/dota2logo2.jpg');
+  background-size: auto;
+  background-position: center;
+  background-repeat: repeat;
+  background-attachment: scroll; 
+}
+
+.ad2l-rankings {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.ad2l-title {
+  color: #ff4500;
+  text-align: center;
+}
+
+.ad2l-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ad2l-th, .ad2l-td {
+  border: 1px solid #444;
+  padding: 10px;
+}
+
+.ad2l-th {
+  background-color: #333;
+  color: #ff4500;
+}
+
+.ad2l-tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+.ad2l-tr:nth-child(odd) {
+  background-color: #1e1e1e;
+}
+
+.ad2l-no-data {
+  color: #ff4500;
+}
