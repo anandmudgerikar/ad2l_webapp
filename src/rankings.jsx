@@ -5,7 +5,7 @@ export default function Rankings() {
 
   useEffect(() => {
     // Fetch rankings data from your API or JSON file
-    fetch('./latest_player_rankings.json')
+    fetch('https://anandmudgerikar.github.io/ad2l_rankings_json_api/latest_player_rankings.json')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
