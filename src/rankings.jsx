@@ -6,7 +6,8 @@ export default function Rankings() {
 
   useEffect(() => {
     // Fetch rankings data from your API or JSON file
-    fetch('https://anandmudgerikar.github.io/ad2l_rankings_json_api/latest_player_rankings_dk.json')
+    //https://anandmudgerikar.github.io/ad2l_rankings_json_api/latest_player_rankings_dk.json
+    fetch('./src/data/latest_player_rankings.json')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -70,12 +71,17 @@ export default function Rankings() {
                 <td className="py-2 ad2l-td">{player.rank_confidence}</td>
                 <td className="py-2 ad2l-td">{player.player_teams.join(', ')}</td>
                 <td className="py-2 ad2l-td">{player.reliable_mmr ? 'Yes' : 'No'}</td>
-                <td className="py-2 ad2l-td">{player.stratz_mmr}</td>
+                <td className="py-2 ad2l-td">
+                  {player.stratz_mmr}
+                  <a href={`https://stratz.com/players/${player.pid}`} target="_blank" rel="noopener noreferrer" className="ml-2" title="Go to player STRATZ page">
+                    <i className="fas fa-external-link-alt"></i>
+                  </a>
+                </td>
               </tr>
             ))
           ) : (
             <tr>
-              <td colSpan="7" className="py-2 text-center ad2l-no-data">No data available</td>
+              <td colSpan="8" className="py-2 ad2l-td">No players meet the confidence threshold.</td>
             </tr>
           )}
         </tbody>
