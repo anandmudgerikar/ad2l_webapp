@@ -54,7 +54,10 @@ export default function Rankings() {
           <tr>
             <th className="py-2 ad2l-th">Rank</th>
             <th className="py-2 ad2l-th">Player Name</th>
-            <th className="py-2 ad2l-th">Current MMR</th>
+            <th className="py-2 ad2l-th">Current MMR<a href="https://github.com/anandmudgerikar/ad2l_dota_bot/blob/main/mmr_calculation_algo.md" target="_blank" rel="noopener noreferrer" className="ml-2" title="Show how the rankings are calculated">
+                <i className="fas fa-info-circle"></i>
+              </a>
+            </th>
             <th className="py-2 ad2l-th">Rank Confidence</th>
             <th className="py-2 ad2l-th">Teams</th>
             <th className="py-2 ad2l-th">Reliable Base MMR?</th>
